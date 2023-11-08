@@ -97,7 +97,7 @@ const displayData = function (args, data) {
         visual.text("Next RCL: " + nextRCL, x, line++, { align: "left", color: "#AACCFF" });
         visual.text("Progress: " + delimit(controller.progress) + " / " + delimit(controller.progressTotal) + " (" + (Math.floor(controller.progress / controller.progressTotal * 1000) / 10) + "%)", x, line++, { align: "left" });
         visual.text("Elapsed: " + delimit(Game.time - data[data.max].tick) + ", Estimated: " + (tPlusEstimate == Infinity ? "No Data" : "T+" + delimit(tPlusEstimate)), x, line++, { align: "left" });
-        visual.text("Estimated tick to RCL: " + (tickEstimate == Infinity ? "No Data" : delimit(tickEstimate)), x, line++, { align: "left" });
+        visual.text("Estimated duration at RCL: " + (tickEstimate == Infinity ? "No Data" : delimit(tickEstimate - data.spawned)), x, line++, { align: "left" });
         visual.text("Avg. Control Points: " + ept + "e/t", x, line++, { align: "left" });
     }
     // GOAL
