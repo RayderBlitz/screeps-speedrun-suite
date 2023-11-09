@@ -29,3 +29,7 @@ mainLoop() {
 - startTime (int): sets the start time to be referenced as spawn time. Debug only, dont use for actual runs!
 - maxRCL (int): the max RCL you want to display
 - showPastMax (bool): whether or not you want to display data past the maxRCL (goal)
+
+## Notes
+
+The suite does not take care of invalidating data from old runs, it's up to you to reset Memory as required!
